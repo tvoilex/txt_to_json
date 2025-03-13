@@ -1,3 +1,8 @@
+1. create venv
+2. pip install -r requirements.txt
+3. vanna_json.py
+
+RESULT:
 Request: "Find accounts with name Test, site test.com, phone 4444, and owned by Natalia Natalia"
 
 Answer:
