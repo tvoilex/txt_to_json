@@ -1,0 +1,144 @@
+{
+    "schema": {
+      "collection": "Account",
+      "fields": {
+        "Name": "string",
+        "Site": "string",
+        "Phone": "phone",
+        "OwnerId": "reference",
+        "Description": "textarea"
+      }
+    },
+    "examples": {
+      "Find accounts with name Test and site test.com": {
+        "version": {"majorRelease": 1, "minorRelease": 8, "patch": 0},
+        "sortColumn": {"logicalName": "Name", "isAscSortOrder": false},
+        "sectionsList": [{
+          "objectName": "Account",
+          "label": "Account DETAILS",
+          "isListView": false,
+          "fieldsList": [
+            {"logicalName": "Name", "operator": "=", "value": "Test", "type": "string", "targetObject": "Account", "showRadiusDistance": false, "isListView": false, "isLabelEdited": false},
+            {"logicalName": "Site", "operator": "=", "value": "test.com", "type": "string", "targetObject": "Account", "showRadiusDistance": false, "isListView": false, "isLabelEdited": false}
+          ]
+        }],
+        "resultColumns": [
+          {"logicalName": "Name", "type": "string", "targetObject": "Account", "label": "Account Name", "isSortable": true, "isRadiusDistance": false, "attribute": "Name"},
+          {"logicalName": "Site", "type": "string", "targetObject": "Account", "label": "Account Site", "isSortable": true, "isRadiusDistance": false, "attribute": "Site"},
+          {"logicalName": "Phone", "type": "phone", "targetObject": "Account", "label": "Account Phone", "isSortable": true, "isRadiusDistance": false, "attribute": "Phone"},
+          {"logicalName": "OwnerId", "type": "reference", "targetObject": "Account", "label": "Owner", "isSortable": true, "isRadiusDistance": false, "attribute": "OwnerId"},
+          {"logicalName": "Description", "type": "textarea", "targetObject": "Account", "label": "Account Description", "isSortable": false, "isRadiusDistance": false, "attribute": "Description"}
+        ],
+        "matchAnySection": false,
+        "mapData": {"zoom": 3.0, "data": {}, "center": {"lat": 42.87596410238256, "lng": -59.76562500000001}}
+      },
+      "Find accounts with phone 4444 sorted by Site ascending": {
+        "version": {"majorRelease": 1, "minorRelease": 8, "patch": 0},
+        "sortColumn": {"logicalName": "Site", "isAscSortOrder": true},
+        "sectionsList": [{
+          "objectName": "Account",
+          "label": "Account DETAILS",
+          "isListView": false,
+          "fieldsList": [
+            {"logicalName": "Phone", "operator": "=", "value": "4444", "type": "phone", "targetObject": "Account", "showRadiusDistance": false, "isListView": false, "isLabelEdited": false}
+          ]
+        }],
+        "resultColumns": [
+          {"logicalName": "Name", "type": "string", "targetObject": "Account", "label": "Account Name", "isSortable": true, "isRadiusDistance": false, "attribute": "Name"},
+          {"logicalName": "Site", "type": "string", "targetObject": "Account", "label": "Account Site", "isSortable": true, "isRadiusDistance": false, "attribute": "Site"},
+          {"logicalName": "Phone", "type": "phone", "targetObject": "Account", "label": "Account Phone", "isSortable": true, "isRadiusDistance": false, "attribute": "Phone"},
+          {"logicalName": "OwnerId", "type": "reference", "targetObject": "Account", "label": "Owner", "isSortable": true, "isRadiusDistance": false, "attribute": "OwnerId"},
+          {"logicalName": "Description", "type": "textarea", "targetObject": "Account", "label": "Account Description", "isSortable": false, "isRadiusDistance": false, "attribute": "Description"}
+        ],
+        "matchAnySection": false,
+        "mapData": {"zoom": 3.0, "data": {}, "center": {"lat": 42.87596410238256, "lng": -59.76562500000001}}
+      },
+      "Find accounts owned by Natalia Natalia": {
+        "version": {"majorRelease": 1, "minorRelease": 8, "patch": 0},
+        "sortColumn": {"logicalName": "Name", "isAscSortOrder": false},
+        "sectionsList": [{
+          "objectName": "Account",
+          "label": "Account DETAILS",
+          "isListView": false,
+          "fieldsList": [
+            {"logicalName": "OwnerId", "operator": "=", "value": "0055e000001TEdhAAG", "type": "reference", "targetObject": "Account", "showRadiusDistance": false, "isListView": false, "isLabelEdited": false, "lookupObject": "User", "isPolymorphicField": false}
+          ]
+        }],
+        "resultColumns": [
+          {"logicalName": "Name", "type": "string", "targetObject": "Account", "label": "Account Name", "isSortable": true, "isRadiusDistance": false, "attribute": "Name"},
+          {"logicalName": "Site", "type": "string", "targetObject": "Account", "label": "Account Site", "isSortable": true, "isRadiusDistance": false, "attribute": "Site"},
+          {"logicalName": "Phone", "type": "phone", "targetObject": "Account", "label": "Account Phone", "isSortable": true, "isRadiusDistance": false, "attribute": "Phone"},
+          {"logicalName": "OwnerId", "type": "reference", "targetObject": "Account", "label": "Owner", "isSortable": true, "isRadiusDistance": false, "attribute": "OwnerId"},
+          {"logicalName": "Description", "type": "textarea", "targetObject": "Account", "label": "Account Description", "isSortable": false, "isRadiusDistance": false, "attribute": "Description"}
+        ],
+        "matchAnySection": false,
+        "mapData": {"zoom": 3.0, "data": {}, "center": {"lat": 42.87596410238256, "lng": -59.76562500000001}}
+      },
+      "Find accounts with name Acme Corp": {
+        "version": {"majorRelease": 1, "minorRelease": 8, "patch": 0},
+        "sortColumn": {"logicalName": "Name", "isAscSortOrder": false},
+        "sectionsList": [{
+          "objectName": "Account",
+          "label": "Account DETAILS",
+          "isListView": false,
+          "fieldsList": [
+            {"logicalName": "Name", "operator": "=", "value": "Acme Corp", "type": "string", "targetObject": "Account", "showRadiusDistance": false, "isListView": false, "isLabelEdited": false}
+          ]
+        }],
+        "resultColumns": [
+          {"logicalName": "Name", "type": "string", "targetObject": "Account", "label": "Account Name", "isSortable": true, "isRadiusDistance": false, "attribute": "Name"},
+          {"logicalName": "Site", "type": "string", "targetObject": "Account", "label": "Account Site", "isSortable": true, "isRadiusDistance": false, "attribute": "Site"},
+          {"logicalName": "Phone", "type": "phone", "targetObject": "Account", "label": "Account Phone", "isSortable": true, "isRadiusDistance": false, "attribute": "Phone"},
+          {"logicalName": "OwnerId", "type": "reference", "targetObject": "Account", "label": "Owner", "isSortable": true, "isRadiusDistance": false, "attribute": "OwnerId"},
+          {"logicalName": "Description", "type": "textarea", "targetObject": "Account", "label": "Account Description", "isSortable": false, "isRadiusDistance": false, "attribute": "Description"}
+        ],
+        "matchAnySection": false,
+        "mapData": {"zoom": 3.0, "data": {}, "center": {"lat": 42.87596410238256, "lng": -59.76562500000001}}
+      },
+      "Find accounts with site example.com sorted by Phone descending": {
+        "version": {"majorRelease": 1, "minorRelease": 8, "patch": 0},
+        "sortColumn": {"logicalName": "Phone", "isAscSortOrder": false},
+        "sectionsList": [{
+          "objectName": "Account",
+          "label": "Account DETAILS",
+          "isListView": false,
+          "fieldsList": [
+            {"logicalName": "Site", "operator": "=", "value": "example.com", "type": "string", "targetObject": "Account", "showRadiusDistance": false, "isListView": false, "isLabelEdited": false}
+          ]
+        }],
+        "resultColumns": [
+          {"logicalName": "Name", "type": "string", "targetObject": "Account", "label": "Account Name", "isSortable": true, "isRadiusDistance": false, "attribute": "Name"},
+          {"logicalName": "Site", "type": "string", "targetObject": "Account", "label": "Account Site", "isSortable": true, "isRadiusDistance": false, "attribute": "Site"},
+          {"logicalName": "Phone", "type": "phone", "targetObject": "Account", "label": "Account Phone", "isSortable": true, "isRadiusDistance": false, "attribute": "Phone"},
+          {"logicalName": "OwnerId", "type": "reference", "targetObject": "Account", "label": "Owner", "isSortable": true, "isRadiusDistance": false, "attribute": "OwnerId"},
+          {"logicalName": "Description", "type": "textarea", "targetObject": "Account", "label": "Account Description", "isSortable": false, "isRadiusDistance": false, "attribute": "Description"}
+        ],
+        "matchAnySection": false,
+        "mapData": {"zoom": 3.0, "data": {}, "center": {"lat": 42.87596410238256, "lng": -59.76562500000001}}
+      },
+      "Find accounts with name Test, site test.com, phone 4444, and owned by Natalia Natalia": {
+        "version": {"majorRelease": 1, "minorRelease": 8, "patch": 0},
+        "sortColumn": {"logicalName": "Name", "isAscSortOrder": false},
+        "sectionsList": [{
+          "objectName": "Account",
+          "label": "Account DETAILS",
+          "isListView": false,
+          "fieldsList": [
+            {"logicalName": "Name", "operator": "=", "value": "Test", "type": "string", "targetObject": "Account", "showRadiusDistance": false, "isListView": false, "isLabelEdited": false},
+            {"logicalName": "Site", "operator": "=", "value": "test.com", "type": "string", "targetObject": "Account", "showRadiusDistance": false, "isListView": false, "isLabelEdited": false},
+            {"logicalName": "Phone", "operator": "=", "value": "4444", "type": "phone", "targetObject": "Account", "showRadiusDistance": false, "isListView": false, "isLabelEdited": false},
+            {"logicalName": "OwnerId", "operator": "=", "value": "0055e000001TEdhAAG", "type": "reference", "targetObject": "Account", "showRadiusDistance": false, "isListView": false, "isLabelEdited": false, "lookupObject": "User", "isPolymorphicField": false}
+          ]
+        }],
+        "resultColumns": [
+          {"logicalName": "Name", "type": "string", "targetObject": "Account", "label": "Account Name", "isSortable": true, "isRadiusDistance": false, "attribute": "Name"},
+          {"logicalName": "Site", "type": "string", "targetObject": "Account", "label": "Account Site", "isSortable": true, "isRadiusDistance": false, "attribute": "Site"},
+          {"logicalName": "Phone", "type": "phone", "targetObject": "Account", "label": "Account Phone", "isSortable": true, "isRadiusDistance": false, "attribute": "Phone"},
+          {"logicalName": "OwnerId", "type": "reference", "targetObject": "Account", "label": "Owner", "isSortable": true, "isRadiusDistance": false, "attribute": "OwnerId"},
+          {"logicalName": "Description", "type": "textarea", "targetObject": "Account", "label": "Account Description", "isSortable": false, "isRadiusDistance": false, "attribute": "Description"}
+        ],
+        "matchAnySection": false,
+        "mapData": {"zoom": 3.0, "data": {}, "center": {"lat": 42.87596410238256, "lng": -59.76562500000001}}
+      }
+    }
+  }
