@@ -1,6 +1,7 @@
 1. create venv
 2. pip install -r requirements.txt
-3. vanna_json.py
+3. Model used: https://openrouter.ai/microsoft/phi-3-medium-128k-instruct:free/api
+4. vanna_json.py
 
 RESULT:
 Request: "Find accounts with name Test, site test.com, phone 4444, and owned by Natalia Natalia"
